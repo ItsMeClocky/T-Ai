@@ -1,0 +1,47 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "functions/**",
+      "**/*.py",
+      "patch*.py",
+      "test_*.py",
+      "rebuild.py",
+      "recover_index.py",
+      "add_*.py",
+      "update_*.py",
+      "fix_index.py",
+      ".vscode/**",
+      "FIREBASE.md",
+      "api_keys.py"
+    ],
+    "rewrites": [
+      { "source": "/generate", "function": "taiApi" },
+      { "source": "/search", "function": "taiApi" },
+      { "source": "/chatwork/send", "function": "taiApi" },
+      { "source": "/chatwork/poll", "function": "taiApi" },
+      { "source": "/chatwork/like", "function": "taiApi" }
+    ]
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local",
+        ".env"
+      ]
+    }
+  ],
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  }
+}

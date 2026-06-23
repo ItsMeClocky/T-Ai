@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=T-Ai
+Comment=T-Ai AI Assistant
+Exec=google-chrome --app=http://localhost:8080/index.html
+Icon=t-ai
+Terminal=false
+Categories=Utility;
